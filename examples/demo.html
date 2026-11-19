@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>browser-verify demo</title>
+<style>
+  :root { --bg: #fcfcfb; --fg: #1a1a1a; --accent: #2f6fde; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) { --bg: #0d0d0d; --fg: #ededed; }
+  }
+  :root[data-theme="dark"] { --bg: #0d0d0d; --fg: #ededed; }
+
+  body { margin: 0; padding: 24px; background: var(--bg); color: var(--fg); font: 15px/1.5 system-ui, sans-serif; }
+
+  .wall { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
+  .wall.list { grid-template-columns: 1fr; }
+  .card { border: 1px solid #8884; border-radius: 8px; padding: 16px; position: relative; }
+
+  /* Intentional bug: the variable is --accent, not --acent.
+     Nothing errors; the badge just silently falls back to transparent. */
+  .badge { position: absolute; top: 8px; right: 8px; padding: 2px 8px; border-radius: 99px;
+           background: var(--acent); color: #fff; font-size: 12px; }
+
+  .bar-track { height: 8px; background: #8883; border-radius: 4px; margin-top: 12px; }
+  .bar-fill  { height: 100%; background: var(--accent); border-radius: 4px; }
+</style>
+</head>
+<body>
+  <h1>Cards</h1>
+  <div class="wall">
+    <div class="card"><span class="badge">new</span><h3>Alpha</h3>
+      <div class="bar-track"><div class="bar-fill" style="width: 72%"></div></div></div>
+    <div class="card"><h3>Beta</h3>
+      <div class="bar-track"><div class="bar-fill" style="width: 35%"></div></div></div>
+    <div class="card"><h3>Gamma</h3>
+      <div class="bar-track"><div class="bar-fill" style="width: 90%"></div></div></div>
+  </div>
+</body>
+</html>

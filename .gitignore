@@ -1,0 +1,15 @@
+# Whitelist: ignore everything, then allow only what is meant to be public.
+# Private recipes, scratch scripts, screenshots and local settings stay out by default.
+/*
+!/.gitignore
+!/.gitattributes
+!/.claude-plugin/
+!/bin/
+!/lib/
+!/examples/
+!/skills/
+!/README.md
+!/README.zh-CN.md
+!/LICENSE
+!/package.json
+!/package-lock.json

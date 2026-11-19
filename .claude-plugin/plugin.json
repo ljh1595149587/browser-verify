@@ -1,0 +1,9 @@
+{
+  "name": "browser-verify",
+  "version": "1.0.0",
+  "description": "Verify frontend changes in a real browser with measured numbers, not eyeballed screenshots.",
+  "author": { "name": "ljh1595149587" },
+  "repository": "https://github.com/ljh1595149587/browser-verify",
+  "license": "MIT",
+  "keywords": ["playwright", "frontend", "css", "verification", "testing"]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "browser-verify",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Verify frontend changes in a real browser with measured numbers, not eyeballed screenshots.",
+  "license": "MIT",
+  "repository": { "type": "git", "url": "git+https://github.com/ljh1595149587/browser-verify.git" },
+  "keywords": ["playwright", "frontend", "css", "verification", "claude-code", "skill"],
+  "engines": { "node": ">=18" },
+  "bin": { "verify": "./bin/verify.mjs" },
+  "scripts": { "demo": "node bin/verify.mjs examples/demo-check.mjs" },
+  "dependencies": { "playwright": "^1.62.0" }
+}
